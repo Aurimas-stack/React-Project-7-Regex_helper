@@ -1,0 +1,43 @@
+#regex_form {
+    margin-top:50px;
+    width: 450px;
+    background-color: #D95032;
+    padding:10px;
+    border-radius: 15px; 
+}
+.input_text_container {
+    margin:10px 0;
+}
+.input_text_container input {
+    width:85%;
+    padding:10px;
+    border:none;
+    border-radius: 5px;
+}
+.input_text_container input:focus {
+    outline: none;
+}
+.input_text_container input::placeholder {
+    color:#000;
+}
+.input_text_container h2 {
+    color:#fff;
+    letter-spacing: 1px;
+    margin:3px 0;
+}
+#regex_form button {
+    padding:10px;
+    border:none;
+    border-radius: 10px;
+    color:#000;
+    font-weight: 500;
+    background-color: #E5DBA8; 
+}
+#regex_form button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+#regex_form button:active {
+    background-color: #6DA653;
+    color:#fff;
+}

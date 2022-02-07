@@ -1,0 +1,19 @@
+
+
+/* Color Theme Swatches in Hex */
+.color-theme_269736368_1165652397297675_3975366720497669775_n-1-hex { color: #285954; }
+.color-theme_269736368_1165652397297675_3975366720497669775_n-2-hex { color: #88BFBA; }
+.color-theme_269736368_1165652397297675_3975366720497669775_n-3-hex { color: #6DA653; }
+.color-theme_269736368_1165652397297675_3975366720497669775_n-4-hex { color: #E5DBA8; }
+.color-theme_269736368_1165652397297675_3975366720497669775_n-5-hex { color: #D95032; }
+
+
+
+.regex_App {
+    min-height: 100vh;
+    width:100%;
+    background-color: #285954;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
