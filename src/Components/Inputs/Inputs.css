@@ -1,6 +1,6 @@
 #regex_form {
     margin-top:50px;
-    width: 450px;
+    width: 600px;
     background-color: #D95032;
     padding:10px;
     border-radius: 15px; 
@@ -9,10 +9,12 @@
     margin:10px 0;
 }
 .input_text_container input {
-    width:85%;
+    width:95%;
     padding:10px;
     border:none;
     border-radius: 5px;
+    font-size: 1rem;
+    letter-spacing: 1px;
 }
 .input_text_container input:focus {
     outline: none;
@@ -40,4 +42,12 @@
 #regex_form button:active {
     background-color: #6DA653;
     color:#fff;
+}
+.input_text_container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+#regex_form > :nth-child(2) > :nth-child(2) input {
+    width:45% !important;
 }
