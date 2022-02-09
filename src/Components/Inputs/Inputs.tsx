@@ -9,7 +9,7 @@ interface Props {
   setRegex: (e: string) => void;
   onRegexSubmit: (e: React.MouseEvent) => void;
   onRegexFlags: (e:string) => void;
-  onStringVariations: () => void;
+  onStringVariations: (e: React.MouseEvent) => void;
 }
 
 export const Inputs: React.FC<Props> = ({
@@ -55,9 +55,10 @@ export const Inputs: React.FC<Props> = ({
           />
         </div>
       </div>
-      <button type="submit" onClick={(e) => {onRegexSubmit(e); onStringVariations()}}>
-        Test regex
+      <button type="submit" onClick={onStringVariations}>
+        Get string variations
       </button>
+      <button type="submit" style={{marginLeft: 20}} onClick={onRegexSubmit}>Get regex</button>
     </form>
   );
 };
