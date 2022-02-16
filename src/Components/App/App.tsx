@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
-import { Inputs } from "../Inputs/Inputs";
+import Inputs from "../Inputs/Inputs";
+import StringVariations from "../StringVariations/StringVariations";
+import TextOutput from "../TextOutput";
 
 import { shuffleWord } from "../Utils/Utils";
 
@@ -30,7 +32,6 @@ function App(): JSX.Element {
     if (regMatchAnswer !== null) {
       setRegexMatch(regMatchAnswer.join(""));
     }
-
   };
 
   const handleRegexFlags = (e: string) => {
@@ -63,45 +64,49 @@ function App(): JSX.Element {
   const handleStringVariationRegex = () => {
     const boolArray: boolean[] = [];
 
-    if(regex.length === 0) return;
+    if (regex.length === 0) return;
 
     stringVariations.forEach((stringVar) => {
       let tempVal: RegExp;
-      if(regexFlags.length > 0) {
+      if (regexFlags.length > 0) {
         tempVal = new RegExp(regex, regexFlags);
       } else {
         tempVal = new RegExp(regex);
       }
-      boolArray.push(tempVal.test(stringVar))
-    })
+      boolArray.push(tempVal.test(stringVar));
+    });
 
-    setStringVarBool(boolArray)
-
-  }
+    setStringVarBool(boolArray);
+  };
 
   return (
     <div className="regex_App">
       <h1>Regex helper</h1>
-      <Inputs
-        string={string}
-        setString={setString}
-        regex={regex}
-        setRegex={setRegex}
-        onRegexSubmit={handleRegex}
-        onRegexFlags={handleRegexFlags}
-        regexFlags={regexFlags}
-        onStringVariations={handleStringVariations}
+      <div className="input_string_cont">
+        <Inputs
+          string={string}
+          setString={setString}
+          regex={regex}
+          setRegex={setRegex}
+          onRegexSubmit={handleRegex}
+          onRegexFlags={handleRegexFlags}
+          regexFlags={regexFlags}
+          onStringVariations={handleStringVariations}
+        />
+        <StringVariations
+          stringVariations={stringVariations}
+          stringVarBool={stringVarBool}
+          onStringVariationRegex={handleStringVariationRegex}
+        />
+      </div>
+      <TextOutput
+        outputString={string}
+        outputDescriptionString={"String to get:"}
       />
-      <h2>String to get: {string}</h2>
-      {stringVariations.length > 0 ? (
-        <div className="string_variation_cont">
-          {stringVariations.map((string, i) => {
-            return <h2 key={i}>{string}</h2>;
-          })}
-          <button onClick={handleStringVariationRegex}>Check All</button>
-        </div>
-      ) : null}
-      <h2>Current regex string: {regexMatch}</h2>
+      <TextOutput
+        outputString={regexMatch}
+        outputDescriptionString={"Current regex string:"}
+      />
     </div>
   );
 }

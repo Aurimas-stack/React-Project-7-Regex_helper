@@ -12,7 +12,7 @@ interface Props {
   onStringVariations: (e: React.MouseEvent) => void;
 }
 
-export const Inputs: React.FC<Props> = ({
+const Inputs: React.FC<Props> = ({
   string,
   setString,
   regex,
@@ -62,3 +62,5 @@ export const Inputs: React.FC<Props> = ({
     </form>
   );
 };
+
+export default Inputs;

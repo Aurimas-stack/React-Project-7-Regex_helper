@@ -1,0 +1,33 @@
+.string_var_cont {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+.string_variations {
+    background-color: #E5DBA8;
+    width: 600px;
+    display:flex;
+    flex-direction: column;
+    padding: 5px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 10px;
+}
+.string_variations > button {
+    padding:10px;
+    border:none;
+    border-radius: 10px;
+    color:#fff;
+    font-weight: 500;
+    background-color: #D95032;; 
+}
+.string_variations > button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+.string_variations > button:active {
+    background-color: #6DA653;
+}
+.string_variations > h3 {
+    margin:5px 0;
+}
