@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/React-Project-7-Regex_helper/static/css/main.2247fb14.css",
+    "main.js": "/React-Project-7-Regex_helper/static/js/main.ddef4e86.js",
+    "static/js/787.c3f97d54.chunk.js": "/React-Project-7-Regex_helper/static/js/787.c3f97d54.chunk.js",
+    "index.html": "/React-Project-7-Regex_helper/index.html",
+    "main.2247fb14.css.map": "/React-Project-7-Regex_helper/static/css/main.2247fb14.css.map",
+    "main.ddef4e86.js.map": "/React-Project-7-Regex_helper/static/js/main.ddef4e86.js.map",
+    "787.c3f97d54.chunk.js.map": "/React-Project-7-Regex_helper/static/js/787.c3f97d54.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2247fb14.css",
+    "static/js/main.ddef4e86.js"
+  ]
+}
